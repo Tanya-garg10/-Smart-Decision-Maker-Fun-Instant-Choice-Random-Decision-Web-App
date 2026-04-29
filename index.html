@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Decision Maker – Instant Choice Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating background shapes -->
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+    <span class="shape shape-4"></span>
+    <span class="shape shape-5"></span>
+    <span class="shape shape-6"></span>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Audio toggle -->
+  <button class="audio-toggle" id="audioToggle" aria-label="Toggle background music" title="Toggle Music">
+    <span class="audio-icon" id="audioIcon">🔇</span>
+  </button>
+
+  <!-- Theme toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle Theme">
+    <span id="themeIcon">🌙</span>
+  </button>
+
+  <main class="container">
+    <!-- Hero -->
+    <header class="hero">
+      <h1 class="hero-title">
+        <span class="emoji-bounce">🎯</span> Smart Decision Maker
+      </h1>
+      <p class="hero-subtitle">Can't decide? Let fate choose for you!</p>
+    </header>
+
+    <!-- Quick-pick presets -->
+    <section class="presets" aria-label="Quick decision presets">
+      <h2 class="section-label">⚡ Quick Picks</h2>
+      <div class="preset-grid">
+        <button class="preset-btn" data-options="Yes,No">👍 Yes / No</button>
+        <button class="preset-btn" data-options="Pizza,Sushi,Tacos,Burgers,Pasta">🍕 What to Eat</button>
+        <button class="preset-btn" data-options="Movie,Gaming,Reading,Walk,Cooking,Nap">🎮 What to Do</button>
+        <button class="preset-btn" data-options="Red,Blue,Green,Purple,Orange,Pink">🎨 Pick a Color</button>
+        <button class="preset-btn" data-options="1,2,3,4,5,6,7,8,9,10">🔢 1 – 10</button>
+        <button class="preset-btn" data-options="Heads,Tails">🪙 Coin Flip</button>
+      </div>
+    </section>
+
+    <!-- Custom options input -->
+    <section class="input-section" aria-label="Add your own options">
+      <h2 class="section-label">✏️ Your Options</h2>
+      <div class="input-row">
+        <input
+          type="text"
+          id="optionInput"
+          class="option-input"
+          placeholder="Type an option and press Enter…"
+          aria-label="Enter a decision option"
+          maxlength="60"
+        />
+        <button class="add-btn" id="addBtn" aria-label="Add option">＋</button>
+      </div>
+      <ul class="options-list" id="optionsList" aria-live="polite"></ul>
+    </section>
+
+    <!-- Decide button -->
+    <div class="decide-area">
+      <button class="decide-btn" id="decideBtn" disabled>
+        <span class="decide-text">🎲 Decide for Me!</span>
+        <span class="decide-spinner" aria-hidden="true"></span>
+      </button>
+      <button class="clear-btn" id="clearBtn" aria-label="Clear all options">🗑️ Clear All</button>
+    </div>
+
+    <!-- Result display -->
+    <section class="result-section hidden" id="resultSection" aria-live="assertive">
+      <div class="result-card" id="resultCard">
+        <p class="result-label">The universe has spoken…</p>
+        <p class="result-value" id="resultValue"></p>
+        <div class="result-emoji" id="resultEmoji" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="history-section" id="historySection" aria-label="Decision history">
+      <h2 class="section-label">📜 History</h2>
+      <ul class="history-list" id="historyList"></ul>
+      <button class="clear-history-btn hidden" id="clearHistoryBtn">Clear History</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with 🎲 &amp; ✨ — Smart Decision Maker</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
