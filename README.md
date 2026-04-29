@@ -6,8 +6,6 @@ A fun, interactive one-page web app that helps you make quick decisions with ins
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
----
-
 ## ✨ Features
 
 - **⚡ Quick Picks** — Preset decisions like Yes/No, What to Eat, Coin Flip, and more
@@ -19,8 +17,6 @@ A fun, interactive one-page web app that helps you make quick decisions with ins
 - **🌙 Dark / Light Theme** — Toggle between themes with localStorage persistence
 - **📱 Fully Responsive** — Works great on desktop, tablet, and mobile
 - **♿ Accessible** — ARIA labels, live regions, and full keyboard support
-
----
 
 ## 🚀 Getting Started
 
@@ -36,8 +32,6 @@ open index.html
 
 Or simply double-click `index.html` to launch.
 
----
-
 ## 📁 Project Structure
 
 ```
@@ -47,8 +41,6 @@ Or simply double-click `index.html` to launch.
 └── README.md    # You are here
 ```
 
----
-
 ## 🎮 How to Use
 
 1. **Pick a preset** or type your own options and press Enter
@@ -56,8 +48,6 @@ Or simply double-click `index.html` to launch.
 3. Watch the slot-machine spin and confetti burst
 4. Check your **decision history** below
 5. Toggle 🌙 dark mode or 🔊 background music anytime
-
----
 
 ## 🛠️ Tech Stack
 
@@ -69,18 +59,12 @@ Or simply double-click `index.html` to launch.
 
 Zero dependencies. No frameworks. Pure web.
 
----
-
 ## 📸 Preview
 
 Open `index.html` in any modern browser to see it in action!
 
----
-
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
----
 
 <p align="center">Made with 🎲 & ✨</p>
